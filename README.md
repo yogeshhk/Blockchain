@@ -2,19 +2,10 @@
 
 Block-chain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network. Basically, a distributed network with a shared memory
 
-## Me? 
-- Why: Quantum jump, any XYZ is earning $$$$, a must for medical/secure data
-- How: become expert by hands-on, talking with local folks, teaching, doodles series
-- What: No Web3/Dao/DeFi/Abit-Altcoin, but blockchain/Crypto-theory), be certified
-- Doodle: concepts, a bit commercial w target as Polygon tech (Dev Advocate)
-
-## Skills?
-- Hyperledger: Fabric/INDY/Sawtooth/Aries
-- Stack: Ethereum, Solidity (Remix IDE), DiFi, Ganache - HardHat
-- Security:
-	- Secure Multi-party Computation,
-	- Fully Homomorphic Encryption,
-	- Zero-Knowledge Proofs
+## Security
+- Secure Multi-party Computation,
+- Fully Homomorphic Encryption,
+- Zero-Knowledge Proofs
 
 ## Zero Knowledge Proof (ZKP)
 - Validate data without exposing it.
@@ -32,7 +23,6 @@ Block-chain is a shared, immutable ledger that facilitates the process of record
 - [But how does bitcoin actually work?](https://www.youtube.com/watch?v=bBC-nXj3Ng4)
 - [A General Introduction to Modern Cryptography - Josh Benaloh, Senior Cryptographer, Microsoft](https://www.youtube.com/watch?v=_Rf15nDic24)
 	- Kerckhoffs's Principle (1883): The security of crypto-system should depend on the key. Meaning, even attacher knows all about the system, except the key.
-- [But how does bitcoin actually work? - 3Blue1Brown](https://www.youtube.com/watch?v=bBC-nXj3Ng4)
 - [Fundamentals Webinar 2020 - Blockchain at Berkeley](https://www.youtube.com/playlist?list=PLSONl1AVlZNWzsyZfhd9yDJRuGv3WPBck)
 - [Blockchain Fundamentals Fall 2021 - Blockchain at Berkeley](https://www.youtube.com/playlist?list=PLSONl1AVlZNWoeYjazuvIVTeX7rxBtDNh)
 - [MIT 15.S12 Blockchain and Money, Fall 2018 - MIT OpenCourseWare](https://www.youtube.com/playlist?list=PLUl4u3cNGP63UUkfL0onkxF6MYgVa04Fn)
