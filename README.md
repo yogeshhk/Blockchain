@@ -18,8 +18,16 @@ Block-chain is a shared, immutable ledger that facilitates the process of record
 - [Polygon](https://polygon.technology/)
 - [DApp University](https://www.youtube.com/c/DappUniversity)
 - [Ethereum Foundation](https://www.youtube.com/c/EthereumFoundation)
+- [Whiteboard Crypto](https://www.youtube.com/c/WhiteboardCrypto)
+- [Eattheblocks](https://www.youtube.com/c/EatTheBlocks)
 
 ## References
+- [Learn to Code Blockchain DApps by Building Simple Games](https://cryptozombies.io/)
+- [Mastering Bitcoin - Github](https://github.com/bitcoinbook/bitcoinbook)
+- [Mastering Ethereum - Github](https://github.com/ethereumbook/ethereumbook)
+- [Learn Blockchain: The COMPLETE beginner’s guide - Dapp University](https://www.youtube.com/watch?v=99pYGpTWcXM)
+- [Solidity, Blockchain, and Smart Contract Course – Beginner to Expert Python Tutorial](https://www.youtube.com/watch?v=M576WGiDBdQ) 16 hours
+- [Cryptography and Network Security - NPTEL](https://nptel.ac.in/courses/106105031) [Youtube](https://www.youtube.com/playlist?list=PL71FE85723FD414D7) Debdeep Mukhopadhyay
 - [But how does bitcoin actually work?](https://www.youtube.com/watch?v=bBC-nXj3Ng4)
 - [A General Introduction to Modern Cryptography - Josh Benaloh, Senior Cryptographer, Microsoft](https://www.youtube.com/watch?v=_Rf15nDic24)
 	- Kerckhoffs's Principle (1883): The security of crypto-system should depend on the key. Meaning, even attacher knows all about the system, except the key.
