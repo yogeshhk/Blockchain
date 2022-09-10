@@ -15,19 +15,81 @@ Block-chain is a shared, immutable ledger that facilitates the process of record
 - [Zero Knowledge Proofs - Dystopia Labs](https://www.youtube.com/playlist?list=PLOZHkgsn2AzNWJF9fIoPpM8ZejOJEyYtY)
 
 ## Follow
+- [OpenMined](https://www.openmined.org/)
 - [Polygon](https://polygon.technology/)
 - [DApp University](https://www.youtube.com/c/DappUniversity)
 - [Ethereum Foundation](https://www.youtube.com/c/EthereumFoundation)
 - [Whiteboard Crypto](https://www.youtube.com/c/WhiteboardCrypto)
 - [Eattheblocks](https://www.youtube.com/c/EatTheBlocks)
 
-## References
+## ToDos
+- [Blockchain A-Z™: Learn How To Build Your First Blockchain - Udemy](https://www.udemy.com/course/build-your-blockchain-az/)
+- [Enterprise Blockchains Fundamentals - Free Course 101 Blockchain](https://101blockchains.com/free-blockchain-course/)
 - [Learn to Code Blockchain DApps by Building Simple Games](https://cryptozombies.io/)
 - [Mastering Bitcoin - Github](https://github.com/bitcoinbook/bitcoinbook)
 - [Mastering Ethereum - Github](https://github.com/ethereumbook/ethereumbook)
 - [Learn Blockchain: The COMPLETE beginner’s guide - Dapp University](https://www.youtube.com/watch?v=99pYGpTWcXM)
 - [Solidity, Blockchain, and Smart Contract Course – Beginner to Expert Python Tutorial](https://www.youtube.com/watch?v=M576WGiDBdQ) 16 hours
 - [Cryptography and Network Security - NPTEL](https://nptel.ac.in/courses/106105031) [Youtube](https://www.youtube.com/playlist?list=PL71FE85723FD414D7) Debdeep Mukhopadhyay
+
+## Notes
+- [Decentriq - Introduction to zk-SNARKs (Part 1)](https://blog.decentriq.com/zk-snarks-primer-part-one/)
+	- ZKPs can be used as the building blocks for verifiable computation: a method of offloading computation from a weak client to a more computationally powerful worker, which enables the client to cryptographically verify the correctness of the computation that was carried out by the worker with a much smaller computational effort compared to executing the original program.
+	-  In machine learning, the technology can be used to prove possession of specific data without the need of full disclosure as well as to enable 3rd parties to verfiy that specific data has been used in the process of model training or prediction
+	- Given problem is transformed by: code flattening, conversion to a rank-1 constraint system (R1CS) and finally formulation of the QAP.
+	- Original problem: Peggie knows roots for the following equation
+		```
+		def f(x):
+			y = x ** 2 - 4
+		```
+	- The corresponding flattened code is:
+		```
+		def f(x):
+				out_1 = x * x
+				y = out_1 - 4	
+		```
+	- A R1CS is a list of triplets of vectors and its solution is a vector such that:
+		$\langle \vec{a_i}, \vec{s} \rangle \ast \langle \vec{b_i}, \vec{s} \rangle - \langle \vec{c_i}, \vec{s} \rangle = 0 \quad \textrm{for} \quad \forall i$ where $\vec{s} = \begin{pmatrix} 1 \\ x \\ out\_1 \\ y \end{pmatrix} $
+	- For example, to encode the first line in the function body we set: $a = [0 1 0 0]; b = [0 1 0 0]; c=[0 0 1 0]$
+	- To encode the second line we use: $a = [-4 0 1 0]; b = [1 0 0 0]; c=[0 0 0 1]$
+	- Line 1: $\begin{equation} 
+\langle \vec{a_1}, \vec{s} \rangle \ast \langle \vec{b_1}, \vec{s} \rangle - \langle \vec{c_1}, \vec{s} \rangle = \sum_{i=1}^{n} a_{1,i} s_i \ast \sum_{i=1}^{n} b_{1,i} s_i - \sum_{i=1}^{n} c_{1,i} s_i = x \ast x - out\_1 = 0 
+\end{equation}$
+	- Line 2: $\begin{equation} 
+\langle \vec{a_2}, \vec{s} \rangle \ast \langle \vec{b_2}, \vec{s} \rangle - \langle \vec{c_2}, \vec{s} \rangle = \sum_{i=1}^{n} a_{2,i} s_i \ast \sum_{i=1}^{n} b_{2,i} s_i - \sum_{i=1}^{n} c_{2,i} s_i = out\_1 - 4 - y = 0 
+\end{equation}$
+	- To complete the transformation to a QAP we need to switch from vectors to polynomials.
+	- Doing a Lagrange interpolation, we arrive at the polynomials $A(x) \ast B(x) - C(x) = H(x) \ast Z(x)$
+	- One nifty trick that we can do with polynomials is to evaluate them at a point that is not known to us, a.k.a. blind evaluation of polynomials.
+	- First, Victor chooses a point x0 at which he wants the polynomial to be evaluated. He then feeds it to f (another linear function) to get a new point, which we denote z, and sends z to Peggy. Note that because of the 1st property of f, there is no way for Peggy to find x0 from z.
+	- Peggie can now compute P(z), which is same as f(P(x0)). Victor can now look at P(z) computed by Peggy and comparei t with f(P(x0)) locally, since he knows f, P and x0. If the two results match, he can be certain that she evaluated P
+ at x0,	
+ - [Zero-Knowledge Proofs - Bharat Kumar Ramesh and Swapnika Nag](https://trilemma.substack.com/p/zero-knowledge-proofs?sd=pf)
+	- Rollup, combines multiple transactions off-chain and computes verified total output.
+	- Rollups look to construct a zero-knowledge proof such that any other nodes can verify it, and be certain that the transactions in the rollup are all valid, without requiring any more information about the transactions
+	- How does a ZK-SNARK work?
+		- The prover does the following:
+			- Takes a list of transactions and adds to the rollup - this is the private input priv_t
+			- Computes the new state of the chain from these transactions - this is a public
+			- value pub_x
+			- Takes the prover_key
+			- Runs the prover function in the program with these parameters (priv_t, pub_x, prover_key) and generates a proof
+			- Broadcasts the proof and the new state of the chain pub_x to all verifiers
+		- Each verifier can now do the following:
+			- Takes the public output or the new state of the chain i.e. pub_x
+			- Receives the proof (from the prover)
+			- Takes the verification_key
+			- Runs the verification function in the program with these parameters (pub_x, proof, verification_key)
+			- The program returns true or false			
+	- The program uses cryptographic methods such that it is possible for the prover to compute a true proof if they have a valid priv_t. But computationally infeasible to do so, if they do not have a valid priv_t
+	- And correspondingly, it is easy for a verifier to verify the same. Therefore, if the proof is computed to true, the verifier can be confident that the private input is valid, without knowing anything more about the input
+	- Therefore, by storing just the proof, along with the new state of the chain on the base layer of Ethereum, one can abstract away a lot of the transactions away from L1, and store them off-chain. 
+			
+- [Zero Knowledge Proof: A Introductory Guide 101 Blockchains](https://101blockchains.com/zero-knowledge-proof/)	
+	- A zero-knowledge proof needs to have three different properties to be fully described. They are:
+		- Completeness: If the statement is really true and both users follow the rules properly, then the verifier would be convinced without any artificial help.
+		- Soundness: In case of the statement being false, the verifier would not be convinced in any scenario. (The method is probabilistically checked to ensure that the probability of falsehood is equal to zero)
+		- Zero-knowledge: The verifier in every case would not know any more information.
 - [But how does bitcoin actually work?](https://www.youtube.com/watch?v=bBC-nXj3Ng4)
 - [A General Introduction to Modern Cryptography - Josh Benaloh, Senior Cryptographer, Microsoft](https://www.youtube.com/watch?v=_Rf15nDic24)
 	- Kerckhoffs's Principle (1883): The security of crypto-system should depend on the key. Meaning, even attacher knows all about the system, except the key.
