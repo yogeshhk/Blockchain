@@ -22,7 +22,7 @@ Block-chain is a shared, immutable ledger that facilitates the process of record
 - [Whiteboard Crypto](https://www.youtube.com/c/WhiteboardCrypto)
 - [Eattheblocks](https://www.youtube.com/c/EatTheBlocks)
 
-## ToDos
+## Courses
 - [Blockchain A-Z™: Learn How To Build Your First Blockchain - Udemy](https://www.udemy.com/course/build-your-blockchain-az/)
 - [Enterprise Blockchains Fundamentals - Free Course 101 Blockchain](https://101blockchains.com/free-blockchain-course/)
 - [Learn to Code Blockchain DApps by Building Simple Games](https://cryptozombies.io/)
