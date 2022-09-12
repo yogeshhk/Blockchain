@@ -26,6 +26,7 @@ Block-chain is a shared, immutable ledger that facilitates the process of record
 - [Blockchain A-Z™: Learn How To Build Your First Blockchain - Udemy](https://www.udemy.com/course/build-your-blockchain-az/)
 - [Enterprise Blockchains Fundamentals - Free Course 101 Blockchain](https://101blockchains.com/free-blockchain-course/)
 - [Learn to Code Blockchain DApps by Building Simple Games](https://cryptozombies.io/)
+- [OpenMinded courses, Private ML](https://courses.openmined.org/)
 - [Mastering Bitcoin - Github](https://github.com/bitcoinbook/bitcoinbook)
 - [Mastering Ethereum - Github](https://github.com/ethereumbook/ethereumbook)
 - [Learn Blockchain: The COMPLETE beginner’s guide - Dapp University](https://www.youtube.com/watch?v=99pYGpTWcXM)
@@ -63,7 +64,8 @@ Block-chain is a shared, immutable ledger that facilitates the process of record
 	- One nifty trick that we can do with polynomials is to evaluate them at a point that is not known to us, a.k.a. blind evaluation of polynomials.
 	- First, Victor chooses a point x0 at which he wants the polynomial to be evaluated. He then feeds it to f (another linear function) to get a new point, which we denote z, and sends z to Peggy. Note that because of the 1st property of f, there is no way for Peggy to find x0 from z.
 	- Peggie can now compute P(z), which is same as f(P(x0)). Victor can now look at P(z) computed by Peggy and comparei t with f(P(x0)) locally, since he knows f, P and x0. If the two results match, he can be certain that she evaluated P
- at x0,	
+ at x0.
+ 
  - [Zero-Knowledge Proofs - Bharat Kumar Ramesh and Swapnika Nag](https://trilemma.substack.com/p/zero-knowledge-proofs?sd=pf)
 	- Rollup, combines multiple transactions off-chain and computes verified total output.
 	- Rollups look to construct a zero-knowledge proof such that any other nodes can verify it, and be certain that the transactions in the rollup are all valid, without requiring any more information about the transactions
