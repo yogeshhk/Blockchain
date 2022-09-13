@@ -5,19 +5,102 @@
 \end{center}
 \end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}[fragile]\frametitle{Whats the Problem?}
-% \begin{itemize}
-% \item Along with some softer words like ``disruption'', ``passionate'', ``excited'' \ldots
-% \item If you don't have word ``innovation'' in your talk/speech/conversation it's  BIG problem. 
-% \item Irrespective of fields. You can be Corporate, Political, Social, etc.
-% \end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Background}
+\begin{itemize}
+\item Bitcoin blockchain is a giant track record of all the Bitcoin transactions that have ever occurred, all the way back to the very first Bitcoin transaction.
+\end{itemize}
 
 
-% And there is an addition of one more word,  which is a must in every talk...and that is?
+\end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Step 1 — Transaction data}
+\begin{itemize}
+\item The blocks on the Bitcoin blockchain consist of approximately 1 MB of data each
+\item The data is about Bitcoin transactions
+\end{itemize}
 
-% \end{frame}
+\begin{center}
+\includegraphics[width=0.8\linewidth,keepaspectratio]{blkchn_1}
+
+{\tiny (Ref:``How does blockchain work in 7 steps — A clear and simple explanation.'' - Jimi S, Good Audience)}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Step 2 — Chaining the blocks (with a hash)}
+\begin{itemize}
+\item Let’s say block 1 registers two transactions, transaction 1 and transaction 2
+\item Assume these fill up 1MB data limit.
+\item This block of data now gets a signature for this specific string of data. Let’s say the signature is ‘X32’.
+\item Similarly next set of transactions go to Block 2 with a signature '9BZ'.
+\item Block 2 gets appended to the existing chain (ie Block 1) 
+\item The signatures link the blocks to each other
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_2}
+
+{\tiny (Ref:``How does blockchain work in 7 steps — A clear and simple explanation.'' - Jimi S, Good Audience)}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Step 2 — Chaining the blocks (with a hash)}
+\begin{itemize}
+\item One more block comes (ie Block 3), it gets appended in a similar manner.
+\item Now imagine if the data in block 1 is altered.
+\item Damian now supposedly sent 500 Bitcoin to George instead of 100 Bitcoin.
+\item Block 1's signature now changes, say it is now ‘W10’
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_3}
+
+{\tiny (Ref:``How does blockchain work in 7 steps — A clear and simple explanation.'' - Jimi S, Good Audience)}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Step 2 — Chaining the blocks (with a hash)}
+\begin{itemize}
+\item The signature W10 does not match the signature that was previously added to block 2 anymore. 
+\item Block 1 and 2 are now considered no longer chained to each other. 
+\item Blockchain rejects this change by shifting back to their previous record of the blockchain where all the blocks are still chained together (the record where Damian sent 100 BTC to George).
+\item If you try to change pointer in Block 2, its data changes, this signature changes and so on
+\item This means that altering a single block requires a new signature for every other block that comes after it all the way to the end of the chain. This is considered to be near impossible.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_4}
+
+{\tiny (Ref:``How does blockchain work in 7 steps — A clear and simple explanation.'' - Jimi S, Good Audience)}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Step 3 — How the signature (hash) is created}
+\begin{itemize}
+\item Signature is created by a cryptographic hash function. 
+\item Takes any string of input and turns it into a unique 64-digit string of output.
+\item e.g. ``761A7DD9CAFE34C7CDE6C1270E17F773025A61E511A56F700D415F0D3E199868''
+\item If a single digit of the input changes, including a space, changing a capital letter or adding a period for example, the hash will be totally different.
+\item But same string 'guarantees' same hash.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_5}
+
+{\tiny (Ref:``How does blockchain work in 7 steps — A clear and simple explanation.'' - Jimi S, Good Audience)}
+\end{center}
+
+\end{frame}
+
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}[fragile]\frametitle{}
