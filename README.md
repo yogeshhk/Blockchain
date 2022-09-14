@@ -32,3 +32,4 @@ Block-chain is a shared, immutable ledger that facilitates the process of record
 - [Learn Blockchain: The COMPLETE beginner’s guide - Dapp University](https://www.youtube.com/watch?v=99pYGpTWcXM)
 - [Solidity, Blockchain, and Smart Contract Course – Beginner to Expert Python Tutorial](https://www.youtube.com/watch?v=M576WGiDBdQ) 16 hours
 - [Cryptography and Network Security - NPTEL](https://nptel.ac.in/courses/106105031) [Youtube](https://www.youtube.com/playlist?list=PL71FE85723FD414D7) Debdeep Mukhopadhyay
+- [Principles of Blockchains](https://courses.grainger.illinois.edu/ece598pv/sp2021/)

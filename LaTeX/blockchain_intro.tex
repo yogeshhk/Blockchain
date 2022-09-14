@@ -19,6 +19,55 @@ And there is an addition of one more word,  which is a must in every talk...and 
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{History}
+\begin{itemize}
+\item Initially came from Stuart Haber and W. Scott Stornetta (not the name though) 1991 paper ``How to Timestamp a digital document''.
+\item Later, Satoshi Nakamoto in his Bitcoin paper, popularized the term 'Blockchain'
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Definition}
+{\emph A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography - Wikipedia}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{}
+\begin{center}
+{\Large Concepts}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Block}
+\begin{itemize}
+\item Block is a set of data/records/transactions, previous block pointer or hash, value ie own hash
+\item First block in the blockchain is called as Genesis block. It will remain forever. Does not have previous hash.
+\item When blocks are linked, becomes a chain.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Hash}
+\begin{itemize}
+\item Fingerprints are unique to an individual (theoretically)
+\item Similarly, Signatures (again, theoretically) to an individual.
+\item Similarly, for data (string typically, but any type is fine), such unique signature is given by Hash function, popular one is SHA256
+\item Requirements for a good hash:
+	\begin{itemize}
+	\item One-way: From data to hash possible, but not the reverse way. Like from finger print you can not find how tall the person is, how s/he looks, etc.
+	\item Deterministic: Even if you do Hashing multiple times, each time, same data gives same hash.
+	\item Fast computation
+	\item Avalanche effect: Even if a tiny change is made to data, the hash will be very different and not slightly different.
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}[fragile]\frametitle{}
 % \begin{center}
