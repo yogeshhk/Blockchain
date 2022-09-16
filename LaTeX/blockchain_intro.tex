@@ -104,3 +104,43 @@ And there is an addition of one more word,  which is a must in every talk...and 
 \end{itemize}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Byzantine Fault Tolerance}
+\begin{itemize}
+\item Based on story of Byzantine castles,  where attacking generals have to come to consensus about the next action.
+\item One of them is traitor. What protocol to be used?
+\item Main general gives some order, then its decided to relay the same order to others, then majority decides the action.
+\item If the commanding general himself is traitor, then he will have to issue at-least one opposite command to create confusion. In that case also the majority rule works fine.
+\item COndition: not more that 30\% can be traitors.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_9}
+
+{\tiny (Ref:``Byzantine problem with 3 generals. PBFT can only tolerate malicious'' - ResearchGate)}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Consensus Protocol: Defense Against Attackers}
+\begin{itemize}
+\item Attacker cannot put a block in the middle as s/he has t syn remaining nodes, which is impossible.
+\item But can the malicious node be added at the end?
+\item Every node does checks to verify the block, if fails, then the block gets rejected. No body gets reward.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Consensus Protocol: Competition Chains}
+\begin{itemize}
+\item Two chains which are far away, can mine a block at almost same time. Which one gets selected?
+\item Many ideas: Proof-Of-Work (PoW) or Proof of Stake (PoS) or others
+\item Only the one who wins the above challenge gets to mine the block.
+\item They get some reward for the work done.
+\item It may happen that some chains add blk1, some other chains add blk2, then which one is to be synced? SOlution is to wait for some time, see which chain is longest chain, that wins. It can be either with blk1 or blk2.
+\end{itemize}
+
+\end{frame}
