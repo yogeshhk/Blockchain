@@ -1,5 +1,8 @@
-# Notes on Blockchain
+# Notes
 
+- [The Coin Bureau Podcast: Crypto Without the Hype](https://podnews.net/podcast/i9xk4)
+	Wonderful podcasts about Blockchain, Bitcoint, Ethereum and all about crypto
+	
 - [Decentriq - Introduction to zk-SNARKs (Part 1)](https://blog.decentriq.com/zk-snarks-primer-part-one/)
 	- ZKPs can be used as the building blocks for verifiable computation: a method of offloading computation from a weak client to a more computationally powerful worker, which enables the client to cryptographically verify the correctness of the computation that was carried out by the worker with a much smaller computational effort compared to executing the original program.
 	-  In machine learning, the technology can be used to prove possession of specific data without the need of full disclosure as well as to enable 3rd parties to verfiy that specific data has been used in the process of model training or prediction
