@@ -1,6 +1,66 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]\frametitle{}
 \begin{center}
+{\Large Bitcoin}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Background}
+In Crypto frameworks, there are 3 layers:
+\begin{itemize}
+\item Technology: Blockchain
+\item Protocol/Coin: Bitcoin. 
+\begin{itemize}
+\item Protocol is a set of rules for participants to communicate, arrive at consensus and in general, govern the network, just like HTTP, TCP/IP, etc. 
+\item Other protocols are: Ethereum, Neo, Ripple, etc. 
+\item Each protocol has its on coin.
+\end{itemize}
+\item Token: functionality/idea based currency.
+\begin{itemize}
+\item ICO (Initial Coin Offering) is misleading as it is not about coin, but Token.
+\item Tokens rely on Smart contracts. There are 100s of tokens on Ethereum (but only one coin, ie Eth)
+\item Bitcoin has no token as it does not have Smart Contracts.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{What is Bitcoin?}
+\begin{itemize}
+\item Bitcoin was invented by a pseudonymous person called Satoshi Nakamoto, in 2008, explained in a white (outline) paper (httos://bitcoin.org/bitcoin.pdf).
+\item Code is Open sourced for anyone to copy, install and run the Bitcoin blockchain.
+\item Bitcoin is a protocol on decentralized, peer-2-peer network to transact value/currency. No intermediary.
+\item Bitcoin ecosystem: Nodes, Miners/users.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Bitcoin's Monetary Policy}
+Entirely written in the code and has two main parts:
+\begin{itemize}
+\item Halving:Number of Bitcoins released after mining, is halved for each 4 years. It started with 50 BTC and now its 6.25. Thus total BTCs will grow infinitely but as the fractional is limited to 8 decimal points it will stop at 2040, with 21 Million BTCs. In addition there are separate transaction fees, which will go increasing.
+\item Block Frequency: Average block times are: Bitcoin 10 minutes, Ethereum 15 sec, Ripple 3.5 sec etc.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Difficulty}
+\begin{itemize}
+\item Mining Target: the puzzle to solve. Meaning, how many leading 0's are being asked to get in the hash.
+\item More the 0's more difficult it is.
+\item 'XXXXX': 0 - 99999 ie 100k options. With '0XXXX': 0 - 9999 ie 10k options. Getting lesser options makes it a smaller pool to throw dart at.
+\item For 18 leading 0's out of 64 characters. Total possible numbers: 16 x 16 x 16 \ldots 64 times = $16^{64}=1.15x10^{77}$. Total valid hashes with 18 leading 0s is $16^{64-18} = 2.45x10^{55}$ so prpbability is the ratio = $2x10^{-22}$ too small. (calculations not very correct?? as order is imp).
+\item Difficulty = current target/ max target. It is adjusted every 2016 blocks (2 weeks). Mas target was the first target.
+\end{itemize}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{}
+\begin{center}
 {\Large How Bitcoin Works?}
 \end{center}
 \end{frame}
