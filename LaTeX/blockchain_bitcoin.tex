@@ -55,6 +55,92 @@ Entirely written in the code and has two main parts:
 \end{itemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Mining Pool}
+\begin{itemize}
+\item Group of miners come together and form a syndicate.
+\item They distribute the ranges to search into, say, 0 - 1B, 1B-2B, etc.
+\item Once any one of them gets, it all share the rewards, based on hashing power submitted to the pool.
+\item Generally a website or an organization, anyone can join.
+\item They make individual getting into mining, very easy. 
+\item China has/had 81\% hash power. Price of electricity decides profitability.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_10}
+
+{\tiny (Ref:``Bitcoin mining pools by location'' - Wikimedia - 20 May 2021)}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Nonce}
+\begin{itemize}
+\item Only 32 bit is allocated for Nonce number in a block, ie 0 to 4B ($2^{32}$).
+\item Is this range good enough, so as to generate total block hash (64bit) with required number of leading 0's?
+\item A modest miner can do 100 million hashes per second. So, 4 Billion will take 40 seconds.
+\item There is another field called 	`timestamp' (unix time), so every second (even if you don't change Nonce) the block hash changes. So you have just 1 second to try whole Nonce range of 0-4B. So, you finish the Nonce range partially and start all over again in the next second.
+\item But mining pools are fast, what happens when they finish computations within  a second?
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.4\linewidth,keepaspectratio]{blkchn_11}
+
+{\tiny (Ref:``How does Bitcoin / Blockchain Mining work?'' by Kirill Eremenko  - Medium)}
+\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{How Miners pick Transactions?}
+\begin{itemize}
+\item Transactions keep on getting collected in a Mempool where Miners are registered. Like a staging area.
+\item All these transactions are unconfirmed. Transaction fees are mentioned.
+\item Miner picks high fees transactions.
+\item Nonce computation starts, till required hash is achieved.
+\item If you don't get the hash in required time,sa, 1 sec, then change the transactions. Repeat.
+\item All this has been automated if you are part of a Mempool.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_12}
+
+{\tiny (Ref:``How does Bitcoin / Blockchain Mining work?'' by Kirill Eremenko  - Medium)}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Hardware}
+\begin{itemize}
+\item CPU: less than 10 million hashes per second
+\item GPU : less than 1 Billion hashes per second
+\item ASIC (Application Specific Integrated Circuit) very specific to calculate hashes: more than 1 trillion hashes per second
+\item Cloud mining: pay per use.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.8\linewidth,keepaspectratio]{blkchn_13}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{51\% Attack}
+\begin{itemize}
+\item Hypothetical but feared that it will happen.
+\item Cant attack any node of a blockchain, so its not about number of nodes, but about hash power.
+\item Its about 51\% of mining is handled by malicious players. 
+\item Such group gets hold of the blockchain and then does not rely back the changes to other nodes. Almost like cutting off.
+\item As this group has more hash power, chains remain disconnected, and some time later start broadcasting again. As they are longer they win the further nodes and thus, own it. Nothing illegal as such, but the transaction they added may suffer double-spend. 
+\itemn The lost transactions from trigonal chain go back to mempool just invalidating all those transactions.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.8\linewidth,keepaspectratio]{blkchn_14}
+
+{\tiny (Ref:``What is 51\% attack? How does 51\% attack work?'' - Tips Make)}
+\end{center}
+
+\end{frame}
 
 
 
