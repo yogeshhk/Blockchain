@@ -1,6 +1,101 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]\frametitle{}
 \begin{center}
-{\Large How Ethereum Works?}
+{\Large Ethereum}
 \end{center}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{What is Ethereum?}
+\begin{itemize}
+\item Started by Vitalik Butarin in 2013.
+\item Bitcoin is a crypto currency, whereas Ethereum is a platform where people can build apps on top.
+\item Its a blockchain which not only allows to store transactions but also programs (Smart Contract) along.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_20}
+
+{\tiny (Ref: Blockchain A-Z: Learn How To Build Your First Blockchain)}
+\end{center}
+
+\end{frame}
+
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_22}
+
+{\tiny (Ref: Blockchain A-Z: Learn How To Build Your First Blockchain)}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{What is Smart Contract?}
+\begin{itemize}
+\item A program having rules-code on blockchain nodes.
+\item Bitcoin has a script called Bitcoin Script, whereas Ethereum has programming languages Solidity using which Smart Contracts can be programmed.
+\item Bitcoin Script is not Turin-Complete, whereas Solidity is.
+\item Whats Turin-Complete? meaning, you can code any logic, say, using conditionals, loops, etc. 
+\item Bitcoin Script does not have loops, to avoid infinite computation possibilities.
+\end{itemize}
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{So, Ethereum is}
+Each node has:
+\begin{itemize}
+\item History of all Smart Contracts.
+\item History of all Transactions.
+\item Current state of all Smart Contracts.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_22}
+
+{\tiny (Ref: Blockchain A-Z: Learn How To Build Your First Blockchain)}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{DApps}
+Decentralized Apps
+\begin{itemize}
+\item Front end as app and back-end as Smart Contracts
+\item Interface to interact with blockchain, an API
+\item Example: Steemit (twitter on blockchain)
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_21}
+
+{\tiny (Ref: What is a dApp? - Algorand Developer Portal)}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{EVM}
+Ethereum Virtual Machine
+
+\begin{itemize}
+\item VM running your machine, to run smart contracts.
+\item It has no access to outside world on the computer. Secure.
+\item Loops are added, but how to curb long computations. Got GAS!!
+\item Basically payment to run computation. More computation more money (GAS). 
+\item For `addition' operation, say, you need 3 units of GAS.
+\item No infinite loop as you will run out of GAS.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_23}
+
+{\tiny (Ref: Ethereum Virtual Machine (EVM) | ethereum.org)}
+\end{center}
+
+\end{frame}
+
+
+

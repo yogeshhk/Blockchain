@@ -131,7 +131,7 @@ Entirely written in the code and has two main parts:
 \item Its about 51\% of mining is handled by malicious players. 
 \item Such group gets hold of the blockchain and then does not rely back the changes to other nodes. Almost like cutting off.
 \item As this group has more hash power, chains remain disconnected, and some time later start broadcasting again. As they are longer they win the further nodes and thus, own it. Nothing illegal as such, but the transaction they added may suffer double-spend. 
-\itemn The lost transactions from trigonal chain go back to mempool just invalidating all those transactions.
+\item The lost transactions from trigonal chain go back to mempool just invalidating all those transactions.
 \end{itemize}
 
 \begin{center}
@@ -143,6 +143,72 @@ Entirely written in the code and has two main parts:
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Transactions}
+\begin{itemize}
+\item UTXOs: Unspent Transactions Outputs. These transactions are like deferred expectations.
+\item When a new transaction comes, you need to pair it with one/some of the earlier UTXOs.
+\item There is no account to hold balance, all are just transactions, which will get evaluated every time.
+\item Need to send all amount, if there is some balance left, make another transaction to put it in own account.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_15}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Where Transactions Fees come from?}
+\begin{itemize}
+\item The unaccounted amount on the output side is considered as Transaction Fees and it goes to miner.
+\item More the fees, more the chance of the transaction getting included.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_16}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{How Wallets Work?}
+\begin{itemize}
+\item There isn't a balance value, then whats this wallet thing? On explorer page , you see the balance.
+\item Wallets actually go through your transactions and then calculate your remaining UTXOs (ie Un-squared) on run time and show it to you.
+\item Squared ones are shown with a block below.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_17}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Signatures}
+\begin{itemize}
+\item In transactions, Public Key is only visible, no other details, like name, city etc.
+\item For adding transaction or deciphering transaction you need private key.
+\item Any blockchain-account will give you PRIVATE key, with that you can generate PUBLIC key.
+\item Anyone will need your PUBLIC key to send you money.
+\item Transaction/message is signed using private key, which any verification agency can verify using public key.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_18}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Public Key vs Bitcoin Address}
+\begin{itemize}
+\item Bitcoin address is sha hash of Public Key.
+\item Address is also public, and money can be sent to it as well, similar to Public Key.
+\item So Bitcoin Address is just additional protection.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_19}
+\end{center}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]\frametitle{}
