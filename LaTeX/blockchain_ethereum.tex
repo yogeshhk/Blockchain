@@ -21,13 +21,6 @@
 
 \end{frame}
 
-\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_22}
-
-{\tiny (Ref: Blockchain A-Z: Learn How To Build Your First Blockchain)}
-\end{center}
-
-\end{frame}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]\frametitle{What is Smart Contract?}
 \begin{itemize}
@@ -60,6 +53,28 @@ Each node has:
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{EVM}
+Ethereum Virtual Machine
+
+\begin{itemize}
+\item VM running your machine, to run smart contracts.
+\item It has no access to outside world on the computer. Secure.
+\item Loops are added, but how to curb long computations. Got GAS!!
+\item Basically payment to run computation. More computation more money (GAS). 
+\item For `addition' operation, say, you need 3 units of GAS.
+\item No infinite loop as you will run out of GAS.
+\item As Eth as currency is volatile, can predict its price, so instead GAS is purchased first then consumed.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.5\linewidth,keepaspectratio]{blkchn_23}
+
+{\tiny (Ref: Ethereum Virtual Machine (EVM) | ethereum.org)}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]\frametitle{DApps}
 Decentralized Apps
 \begin{itemize}
@@ -77,26 +92,75 @@ Decentralized Apps
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]\frametitle{EVM}
-Ethereum Virtual Machine
+\begin{frame}[fragile]\frametitle{DAQs}
+Decentralized Autonomous Organizations
 
 \begin{itemize}
-\item VM running your machine, to run smart contracts.
-\item It has no access to outside world on the computer. Secure.
-\item Loops are added, but how to curb long computations. Got GAS!!
-\item Basically payment to run computation. More computation more money (GAS). 
-\item For `addition' operation, say, you need 3 units of GAS.
-\item No infinite loop as you will run out of GAS.
-\item As Eth as currency is volatile, can predict its price, so instead GAS is purchased first then consumed.
+\item Traditional organizations have hierarchies, they follow protocols/processes/work-flows.
+\item All these are replaced by Smart Contracts in DAOs. 
+\item Basically, not just automated but autonomous.
+\item No central decision making, but democratic or decentralized.
 \end{itemize}
 
 \begin{center}
-\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_23}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_24}
 
-{\tiny (Ref: Ethereum Virtual Machine (EVM) | ethereum.org)}
+{\tiny (Ref: Moralis Academy - Comparing a DAO to a Traditional Organization)}
 \end{center}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{The DAQ Attack}
+
+\begin{itemize}
+\item Started by Vitalik, in 2016, on Ethereum
+\item Got funded in May 2016 for \$150M
+\item Bug in the Smart Contract code, so there was attack on June 2016 for \$50M
+\item There was a breather time before funds moved out, so deliberation happened on if 'Code is Law?'
+\item Hard fork, to reverse the transaction. But split happened in Ethereum and new Ethereum Classic (no change advocates) was born.
+\item Hacker finally walked away with \$67M in Ethereum Classic.
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Hard/Soft Fork}
+
+\begin{itemize}
+\item Due to DAO attack, Hard (physical split of chain) fork was done on Ethereum, to correct the bug.
+\item To increase block size to 8MB, Bitcoin did soft (software split only) fork, called Bitcoin Cash
+\item One Hard-fork happened for ASIC resistance and back to GPU, called Bitcoin GOLD
+\item Hard fork is not backward compatible, but Soft-fork is. If block size is increased from 1 to 8MB, old block are still within 8MB, anyways, right?
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_25}
+
+{\tiny (Ref: Blockchain A-Z: Learn How To Build Your First Blockchain)}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{ICOs}
+Initial Coin Offerings
+
+\begin{itemize}
+\item Not actually coin but token/idea/functionality offering.
+\item IPO (Initial Public Offering): companies offer shares for getting public funds, for the first time.
+\item ICOs: give out tokens in exchange of funds/coins. Tokens can be used to buy their products or special permissions.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,keepaspectratio]{blkchn_26}
+
+{\tiny (Ref: Blockchain A-Z: Learn How To Build Your First Blockchain)}
+\end{center}
+
+\end{frame}
+
 
 
 
