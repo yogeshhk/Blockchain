@@ -10,7 +10,41 @@
 \begin{frame}[fragile]\frametitle{Installations}
 \begin{itemize}
 \item Install Anaconda-Python 3.6
-\item Install packages: postman, flask, requests
+\item Install packages: postman, Flask 0.12.2, requests
 \item Have some IDE like Spider, Pycharm etc.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Creating a Blockchain}
+\begin{itemize}
+\item Create class Blockchain
+\item Initialize the chain as empty list and create first/genesis block with some `proof` and None (ie '0') previous hash.
+\item A block can get added if they come up with has that is same as given proof.
+\item Each block will be a dict with keys as: index, timestamp, proof, previous_hash and data
+\end{itemize}
+
+\begin{lstlisting}
+class Blockchain:
+    def __init__(self):
+        self.chain = []
+        self.create_block(proof=1, previous_hash='0')
+
+    def create_block(self, proof, previous_hash):
+        block = {'index': len(self.chain)+1,
+                 'timestamp': str(datetime.datetime.now()),
+                 'proof': proof,
+                 'previous_hash': previous_hash
+                 }
+        self.chain.append(block)
+        return block
+\end{lstlisting}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]\frametitle{Mining the Blockchain}
+\begin{itemize}
+\item aa
 \end{itemize}
 \end{frame}
